@@ -1,7 +1,3 @@
-This is a clean, professional `README.md` structure for your **Forest Weather Index (FWI) Prediction** project. I have organized it using standard Markdown best practices to ensure it looks great on platforms like GitHub.
-
----
-
 ```markdown
 # Forest Weather Index (FWI) Prediction – Machine Learning & Flask Application
 
@@ -143,6 +139,3 @@ Navigate to: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 ## 📜 License
 
 This project is intended for educational and portfolio demonstration purposes.
-
-```
-
