@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FWI Prediction</title>
+</head>
+<body>
+
+    <h1>Forest Weather Index (FWI) Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Temperature (°C)</label><br>
+        <input type="number" name="Temperature" step="any" required><br><br>
+
+        <label>Relative Humidity (%)</label><br>
+        <input type="number" name="RH" step="any" required><br><br>
+
+        <label>Wind Speed (km/h)</label><br>
+        <input type="number" name="Ws" step="any" required><br><br>
+
+        <label>Rain (mm)</label><br>
+        <input type="number" name="Rain" step="any" required><br><br>
+
+        <label>FFMC</label><br>
+        <input type="number" name="FFMC" step="any" required><br><br>
+
+        <label>DMC</label><br>
+        <input type="number" name="DMC" step="any" required><br><br>
+
+        <label>DC</label><br>
+        <input type="number" name="DC" step="any" required><br><br>
+
+        <label>ISI</label><br>
+        <input type="number" name="ISI" step="any" required><br><br>
+
+        <label>BUI</label><br>
+        <input type="number" name="BUI" step="any" required><br><br>
+
+        <label>Classes</label><br>
+        <select name="Classes" required>
+            <option value="0">Not Fire</option>
+            <option value="1">Fire</option>
+        </select><br><br>
+
+        <label>Region</label><br>
+        <select name="region" required>
+            <option value="0">Bejaia</option>
+            <option value="1">Sidi-Bel Abbes</option>
+        </select><br><br>
+
+        <button type="submit">Predict FWI</button>
+
+    </form>
+
+    {% if prediction is defined %}
+        <hr>
+        <h2>Predicted FWI: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
